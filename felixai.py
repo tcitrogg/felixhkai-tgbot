@@ -141,7 +141,7 @@ async def handle_message(update: Update, context: ContextTypes):
 
 
 async def error(update:Update, context: ContextTypes):
-    await update.message.reply_markdown_v2(f"❌ Oops! an Error ocurred!\n{context.error}")
+    # await update.message.reply_markdown_v2(f"❌ Oops! an Error ocurred!\n{context.error}")
     print(f"(!) Alert: {update} caused an error {context.error}")
 
 
