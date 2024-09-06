@@ -25,6 +25,7 @@ from dotenv import load_dotenv
 
 f = Figlet(font="graffiti")
 
+load_dotenv()
 TOKEN = os.getenv("TOKEN")
 BOT_USERNAME = "felixai_hkbot"
 # USERNAME =
@@ -40,7 +41,6 @@ def gen_password(length=8, contains_symbols=False):
     #     password = password + random.choice(chars)
     password = random.choices(our_string, k=length)
     icon = random.choice(['🔑', '🗝'])
-    no_chars = f"_{length} characters_"
     return f'''{icon} Password:
     ```{''.join(password)}```
 _{length} characters_
