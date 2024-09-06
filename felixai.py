@@ -9,20 +9,23 @@ Required modules
 - python-telegram-bot
 - pyfiglet
 - duckduckgo-search
+- python-dotenv
 """
 
 import string
 import random
+import os
 from telegram import Update
 from telegram.ext import Application, ContextTypes, CommandHandler, MessageHandler, filters
 from datetime import datetime
 from pyfiglet import Figlet
 from time import sleep
 from duckduckgo_search import DDGS
+from dotenv import load_dotenv
 
 f = Figlet(font="graffiti")
 
-TOKEN = "6793843633:AAGdf6da2vXAtA5O6ENMcs7PFa9zUoWECE4"
+TOKEN = os.getenv("TOKEN")
 BOT_USERNAME = "felixai_hkbot"
 # USERNAME =
 
